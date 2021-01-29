@@ -27,7 +27,7 @@ myFunction();
 
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-// let counter = 0;
+// let counter = 0;  // It was hard to tell from the instructions if a closure was wanted here. We didn't need a closure so I just did it normally, but this is where counter would go if we wanted to make summation an example of a closure.
 function summation(number) {
 	let counter = 0;
 	for (let i = number; i >= 0; i--) {
@@ -163,14 +163,14 @@ function consume(a, b, cb) {
 /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
 // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
 
-function add(a, b) {
-	return a + b;
+function add(num1, num2) {
+	return num1 + num2;
 }
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
 
-function multiply(a, b) {
-	return a * b;
+function multiply(num1, num2) {
+	return num1 * num2;
 }
 
 // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
@@ -187,6 +187,8 @@ console.log(consume('Mary', 'Poppins', greeting)); // Hello Mary Poppins, nice t
 
 // 🦁💪 Stretch: If you haven't already, convert your array method callbacks into arrow functions - make sure you comment out this section before you submit your work 🦁💪
 
+// Already used arrow functions in the MVP.
+
 // 🐴🐴🐴 Topic 3: Prototypes 🐴🐴🐴 //
 //🐴🐴🐴 Task: You are to build a cuboid maker that can return values for a cuboid's volume or surface area. Cuboids are similar to cubes but do not have even sides. Follow the steps in order to accomplish this challenge. 🐴🐴🐴
 /* 🐴🐴🐴 Step 1: Base Constructor 🐴🐴🐴
@@ -201,6 +203,7 @@ function CuboidMaker({ length, width, height }) {
 /* 🐴🐴🐴 Step 2: Volume Method 🐴🐴🐴
   Create a method called volume using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
   Formula for cuboid volume: length * width * height   */
+
 CuboidMaker.prototype.volume = function () {
 	return this.length * this.width * this.height;
 };
@@ -256,6 +259,23 @@ console.log(cuboidTwo.volume()); // 100
 console.log(cuboidTwo.surfaceArea()); // 130
 
 // 🦄 💪 Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area. 🦄 💪
+
+// class CubeMaker extends CuboidMaker {
+// 	constructor({ length, width, height }) {
+// 		super({ length, width, height });
+// 	}
+// 	volume() {
+// 		return this.length ** 3;
+// 	}
+// 	surfaceArea() {
+// 		return 6 * this.length ** 2;
+// 	}
+// }
+
+// const testCube = new CubeMaker({ length: 5, width: 5, height: 5 });
+
+// console.log('testCube.volume: ', testCube.volume());
+// console.log('testCube.surfaceArea: ', testCube.surfaceArea());
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
 function foo() {

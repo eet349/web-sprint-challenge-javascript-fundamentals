@@ -30,11 +30,11 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 2. Explain the difference between a callback and a higher order function.
 
-   - A higher order function in a function that receives a function as an argument. A callback is a function that is passed into a higher order function.
+   - A higher order function is a function that receives a function(callback) as an argument. A callback is a function that is passed into a higher order function.
 
 3. What is closure?
 
-   - When a function reaches outside it self to access a variable(or parameter).
+   - When a function reaches outside it self to access a variable(or parameter). If a variable(or parameter) is not defined in lexical scope its being used JavaScript will keep checking the execution context one level up until it either finds it or gets to the global scope. If it gets to the global scope and that variable is still not found, then JS knows that the variable is not defined.
 
 4. Describe the four rules of the 'this' keyword.
 
@@ -71,19 +71,19 @@ Your finished project must include all of the following requirements
 
 This challenge takes a look at closures as well as scope.
 
-- [ ] Find this challenge in the index.js file. Read the instructions carefully!
+- [x] Find this challenge in the index.js file. Read the instructions carefully!
 
 #### Task B: Objects and Arrays
 
 Test your knowledge of advanced array methods and callbacks.
 
-- [ ] Find this challenge in the index.js file. Read the instructions carefully!
+- [x] Find this challenge in the index.js file. Read the instructions carefully!
 
 #### Task C: Prototypes
 
 Create constructors, bind methods, and create cuboids in this prototypes challenge.
 
-- [ ] Find this challenge in the index.js file. Read the instructions carefully!
+- [x] Find this challenge in the index.js file. Read the instructions carefully!
 
 #### Task D: Classes
 
