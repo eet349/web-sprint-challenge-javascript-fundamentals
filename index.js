@@ -27,9 +27,9 @@ myFunction();
 
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-// let counter = 0;  // It was hard to tell from the instructions if a closure was wanted here. We didn't need a closure so I just did it normally, but this is where counter would go if we wanted to make summation an example of a closure.
+let counter = 0; // It was hard to tell from the instructions if a closure was wanted here.
 function summation(number) {
-	let counter = 0;
+	// let counter = 0;     // this seems more normal
 	for (let i = number; i >= 0; i--) {
 		counter += i;
 	}
